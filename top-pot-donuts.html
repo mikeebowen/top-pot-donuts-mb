@@ -1,0 +1,36 @@
+<script type="text/javascript">
+  function TopPotStore(footTrafficCeiling, footTrafficFloor, percentEnter, averagePurchase, storeName){
+    this.footTrafficCeiling = footTrafficCeiling;
+    this.footTrafficFloor = footTrafficFloor;
+    this.percentEnter = percentEnter;
+    this.averagePurchase = averagePurchase;
+    this.hourlySales = 0;
+    this.dailySales = 0;
+    this.hour = 0;
+    this.storeName = storeName;
+
+    this.hourly = function(){
+      this.hourlySales = (Math.random()*(this.footTrafficCeiling - this.footTrafficFloor) + this.footTrafficFloor) * this.percentEnter * this.averagePurchase;
+      this.hour += 1;
+      console.log(this.storeName + " received " + this.hourlySales + " during hour " + this.hour);
+      this.dailySales += this.hourlySales;
+    }
+    this.dailyReport = function(){
+      for(i = 1; i <= 11; i++){
+        this.hourly();
+      }
+      console.log(this.storeName + " received " + this.dailySales + " for the entire day.");
+    }
+
+  }
+var downtown = new TopPotStore(220,80,0.1,4,"Downtown");
+var capitolHill = new TopPotStore(45,5,0.45,2,"Capitol Hill");
+var southLakeUnion = new TopPotStore(250,180,0.5,6, "South Lake Union");
+var wedgewood = new TopPotStore(60,20,0.20,1.5,"Wedgewood");
+var ballard = new TopPotStore(175,25,0.33,1,"Ballard")
+downtown.dailyReport();
+capitolHill.dailyReport();
+southLakeUnion.dailyReport();
+wedgewood.dailyReport();
+ballard.dailyReport();
+</script>
