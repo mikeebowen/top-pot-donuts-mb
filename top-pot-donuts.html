@@ -12,7 +12,7 @@
     this.hourly = function(){
       this.hourlySales = (Math.random()*(this.footTrafficCeiling - this.footTrafficFloor) + this.footTrafficFloor) * this.percentEnter * this.averagePurchase;
       this.hour += 1;
-      console.log(this.storeName + " received " + this.hourlySales + "during hour " + this.hour);
+      console.log(this.storeName + " received " + this.hourlySales + " during hour " + this.hour);
       this.dailySales += this.hourlySales;
     }
     this.dailyReport = function(){
@@ -24,10 +24,10 @@
 
   }
 var downtown = new TopPotStore(220,80,0.1,4,"Downtown");
-var capitolHill = new TopPotStore(5,45,0.45,2,"Capitol Hill");
-var southLakeUnion = new TopPotStore(180,250,0.5,6, "South Lake Union");
-var wedgewood = new TopPotStore(20,60,0.20,1.5,"Wedgewood");
-var ballard = new TopPotStore(25,175,0.33,1,"Ballard")
+var capitolHill = new TopPotStore(45,5,0.45,2,"Capitol Hill");
+var southLakeUnion = new TopPotStore(250,180,0.5,6, "South Lake Union");
+var wedgewood = new TopPotStore(60,20,0.20,1.5,"Wedgewood");
+var ballard = new TopPotStore(175,25,0.33,1,"Ballard")
 downtown.dailyReport();
 capitolHill.dailyReport();
 southLakeUnion.dailyReport();

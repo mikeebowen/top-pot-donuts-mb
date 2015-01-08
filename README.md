@@ -1,65 +1,132 @@
 # top-pot-donuts-mb
+
 I tried to rework the code from the example we got it class today, but I kept coming up with errors.
 I worked with Zach and Claudia. Zach especially helped with the formula and Claudia spotted some syntax errors I'd made. I still couldn't get the equation to work, with help from Chareesa and Mel (I needed help more than a couple times) I found my variables were not being redefined the way I intended.
+
 Once I had it working, I added storeName and hour variables and appended each of the outputs with the store name and the hourly with the hour, so that it is clear which store received which sales and at what hour.
-Here's the output for one run:
- Downtown received 54.490106362849474during hour 1
-top-pot-donuts-4.html:15 Downtown received 67.4886099267751during hour 2
-top-pot-donuts-4.html:15 Downtown received 84.94203298352659during hour 3
-top-pot-donuts-4.html:15 Downtown received 46.903013890609145during hour 4
-top-pot-donuts-4.html:15 Downtown received 85.28897943347692during hour 5
-top-pot-donuts-4.html:15 Downtown received 52.50224564038217during hour 6
-top-pot-donuts-4.html:15 Downtown received 36.81757885403931during hour 7
-top-pot-donuts-4.html:15 Downtown received 78.59998844750226during hour 8
-top-pot-donuts-4.html:15 Downtown received 70.23557762987912during hour 9
-top-pot-donuts-4.html:15 Downtown received 59.11080374196172during hour 10
-top-pot-donuts-4.html:15 Downtown received 56.34554987214506during hour 11
-top-pot-donuts-4.html:22 Downtown received 692.7244867831469 for the entire day.
-top-pot-donuts-4.html:15 Capitol Hill received 36.70658639911562during hour 1
-top-pot-donuts-4.html:15 Capitol Hill received 26.10244820639491during hour 2
-top-pot-donuts-4.html:15 Capitol Hill received 14.445550611242652during hour 3
-top-pot-donuts-4.html:15 Capitol Hill received 14.334241585806012during hour 4
-top-pot-donuts-4.html:15 Capitol Hill received 25.438975190743804during hour 5
-top-pot-donuts-4.html:15 Capitol Hill received 14.71591819357127during hour 6
-top-pot-donuts-4.html:15 Capitol Hill received 20.67735114879906during hour 7
-top-pot-donuts-4.html:15 Capitol Hill received 10.359336747787893during hour 8
-top-pot-donuts-4.html:15 Capitol Hill received 6.678373670205474during hour 9
-top-pot-donuts-4.html:15 Capitol Hill received 25.450385835953057during hour 10
-top-pot-donuts-4.html:15 Capitol Hill received 7.371831360273063during hour 11
-top-pot-donuts-4.html:22 Capitol Hill received 202.28099894989282 for the entire day.
-top-pot-donuts-4.html:15 South Lake Union received 719.2082333704457during hour 1
-top-pot-donuts-4.html:15 South Lake Union received 650.2541890600696during hour 2
-top-pot-donuts-4.html:15 South Lake Union received 693.3477425761521during hour 3
-top-pot-donuts-4.html:15 South Lake Union received 653.5401056427509during hour 4
-top-pot-donuts-4.html:15 South Lake Union received 701.5277624619193during hour 5
-top-pot-donuts-4.html:15 South Lake Union received 561.7376757902093during hour 6
-top-pot-donuts-4.html:15 South Lake Union received 640.0996106816456during hour 7
-top-pot-donuts-4.html:15 South Lake Union received 734.9565942236222during hour 8
-top-pot-donuts-4.html:15 South Lake Union received 551.5318817133084during hour 9
-top-pot-donuts-4.html:15 South Lake Union received 638.0864205001853during hour 10
-top-pot-donuts-4.html:15 South Lake Union received 710.8234007097781during hour 11
-top-pot-donuts-4.html:22 South Lake Union received 7255.1136167300865 for the entire day.
-top-pot-donuts-4.html:15 Wedgewood received 17.41175107844174during hour 1
-top-pot-donuts-4.html:15 Wedgewood received 10.389196677133441during hour 2
-top-pot-donuts-4.html:15 Wedgewood received 14.074807589873672during hour 3
-top-pot-donuts-4.html:15 Wedgewood received 17.46070199366659during hour 4
-top-pot-donuts-4.html:15 Wedgewood received 15.27059718221426during hour 5
-top-pot-donuts-4.html:15 Wedgewood received 16.069443371146917during hour 6
-top-pot-donuts-4.html:15 Wedgewood received 9.560441164299846during hour 7
-top-pot-donuts-4.html:15 Wedgewood received 14.219562951475382during hour 8
-top-pot-donuts-4.html:15 Wedgewood received 8.479759141802788during hour 9
-top-pot-donuts-4.html:15 Wedgewood received 6.283255792222917during hour 10
-top-pot-donuts-4.html:15 Wedgewood received 7.431591108441353during hour 11
-top-pot-donuts-4.html:22 Wedgewood received 136.6511080507189 for the entire day.
-top-pot-donuts-4.html:15 Ballard received 50.397494245902635during hour 1
-top-pot-donuts-4.html:15 Ballard received 42.0610313747311during hour 2
-top-pot-donuts-4.html:15 Ballard received 33.412657039705664during hour 3
-top-pot-donuts-4.html:15 Ballard received 54.19948740990367during hour 4
-top-pot-donuts-4.html:15 Ballard received 27.594618586823344during hour 5
-top-pot-donuts-4.html:15 Ballard received 18.967391354497522during hour 6
-top-pot-donuts-4.html:15 Ballard received 25.110214377287775during hour 7
-top-pot-donuts-4.html:15 Ballard received 56.08747359865811during hour 8
-top-pot-donuts-4.html:15 Ballard received 14.429394074133597during hour 9
-top-pot-donuts-4.html:15 Ballard received 24.45641951879952during hour 10
-top-pot-donuts-4.html:15 Ballard received 31.979735952685587during hour 11
-top-pot-donuts-4.html:22 Ballard received 378.6959175331285 for the entire day.
+After looking at my code again later. I realized that I had switched the footTrafficCeiling and footTrafficFloor in some of the "var"s and I needed to add a space , so I fixed that and created a new pull request. I pasted the new results below.
+
+
+
+Here's the output from my new code:
+
+Downtown received 71.08276487141848 during hour 1
+
+top-pot-donuts.html:15 Downtown received 35.051449701189995 during hour 2
+
+top-pot-donuts.html:15 Downtown received 80.97662115842104 during hour 3
+
+top-pot-donuts.html:15 Downtown received 36.6552702691406 during hour 4
+
+top-pot-donuts.html:15 Downtown received 87.85327021218836 during hour 5
+
+top-pot-donuts.html:15 Downtown received 35.665851110592484 during hour 6
+
+top-pot-donuts.html:15 Downtown received 56.21556715853512 during hour 7
+
+top-pot-donuts.html:15 Downtown received 66.0150973573327 during hour 8
+
+top-pot-donuts.html:15 Downtown received 46.65367618389428 during hour 9
+
+top-pot-donuts.html:15 Downtown received 56.6844701115042 during hour 10
+
+top-pot-donuts.html:15 Downtown received 57.62488091737032 during hour 11
+
+top-pot-donuts.html:22 Downtown received 630.4789190515876 for the entire day.
+
+top-pot-donuts.html:15 Capitol Hill received 22.233370101079345 during hour 1
+
+top-pot-donuts.html:15 Capitol Hill received 8.790821584872901 during hour 2
+
+top-pot-donuts.html:15 Capitol Hill received 5.596862738952041 during hour 3
+
+top-pot-donuts.html:15 Capitol Hill received 24.863239084370434 during hour 4
+
+top-pot-donuts.html:15 Capitol Hill received 4.813123921863735 during hour 5
+
+top-pot-donuts.html:15 Capitol Hill received 7.643388141877949 during hour 6
+
+top-pot-donuts.html:15 Capitol Hill received 20.07064368389547 during hour 7
+
+top-pot-donuts.html:15 Capitol Hill received 14.811887363903224 during hour 8
+
+top-pot-donuts.html:15 Capitol Hill received 11.770675912499428 during hour 9
+
+top-pot-donuts.html:15 Capitol Hill received 15.788225878961384 during hour 10
+
+top-pot-donuts.html:15 Capitol Hill received 26.37572818994522 during hour 11
+
+top-pot-donuts.html:22 Capitol Hill received 162.75796660222113 for the entire day.
+
+top-pot-donuts.html:15 South Lake Union received 684.8391691991128 during hour 1
+
+top-pot-donuts.html:15 South Lake Union received 541.5878105023876 during hour 2
+
+top-pot-donuts.html:15 South Lake Union received 584.1269885958172 during hour 3
+
+top-pot-donuts.html:15 South Lake Union received 625.3774422244169 during hour 4
+
+top-pot-donuts.html:15 South Lake Union received 548.6754248547368 during hour 5
+
+top-pot-donuts.html:15 South Lake Union received 726.8034521467052 during hour 6
+
+top-pot-donuts.html:15 South Lake Union received 608.6320523056202 during hour 7
+
+top-pot-donuts.html:15 South Lake Union received 560.4310383601114 during hour 8
+
+top-pot-donuts.html:15 South Lake Union received 723.12477522064 during hour 9
+
+top-pot-donuts.html:15 South Lake Union received 593.0552565003745 during hour 10
+
+top-pot-donuts.html:15 South Lake Union received 693.2288640690967 during hour 11
+
+top-pot-donuts.html:22 South Lake Union received 6889.882273979019 for the entire day.
+
+top-pot-donuts.html:15 Wedgewood received 7.779043961316347 during hour 1
+
+top-pot-donuts.html:15 Wedgewood received 17.726214182563126 during hour 2
+
+top-pot-donuts.html:15 Wedgewood received 17.050091933459044 during hour 3
+
+top-pot-donuts.html:15 Wedgewood received 14.811657627113163 during hour 4
+
+top-pot-donuts.html:15 Wedgewood received 7.164005124941468 during hour 5
+
+top-pot-donuts.html:15 Wedgewood received 14.255712747573853 during hour 6
+
+top-pot-donuts.html:15 Wedgewood received 10.297106184996665 during hour 7
+
+top-pot-donuts.html:15 Wedgewood received 10.214057114906609 during hour 8
+
+top-pot-donuts.html:15 Wedgewood received 17.423927061259747 during hour 9
+
+top-pot-donuts.html:15 Wedgewood received 13.67091852799058 during hour 10
+
+top-pot-donuts.html:15 Wedgewood received 6.397112460806966 during hour 11
+
+top-pot-donuts.html:22 Wedgewood received 136.78984692692757 for the entire day.
+
+top-pot-donuts.html:15 Ballard received 41.333935931674205 during hour 1
+
+top-pot-donuts.html:15 Ballard received 46.502987839397974 during hour 2
+
+top-pot-donuts.html:15 Ballard received 19.157976138289087 during hour 3
+
+top-pot-donuts.html:15 Ballard received 43.43091532797553 during hour 4
+
+top-pot-donuts.html:15 Ballard received 14.132639867719263 during hour 5
+
+top-pot-donuts.html:15 Ballard received 41.828026243136264 during hour 6
+
+top-pot-donuts.html:15 Ballard received 15.551511733559892 during hour 7
+
+top-pot-donuts.html:15 Ballard received 23.124959982465953 during hour 8
+
+top-pot-donuts.html:15 Ballard received 53.753346494282596 during hour 9
+
+top-pot-donuts.html:15 Ballard received 35.373920532292686 during hour 10
+
+top-pot-donuts.html:15 Ballard received 48.882099318900146 during hour 11
+
+top-pot-donuts.html:22 Ballard received 383.0723194096936 for the entire day.
+
